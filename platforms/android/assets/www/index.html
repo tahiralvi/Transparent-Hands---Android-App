@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css" />
+
+		 <link rel="stylesheet" href="css/jquery.mobile.custom.structure.css" >
+   
+    <script src="css/jquery.mobile.custom.js"></script>
+    <script src="css/jquery.mobile.custom.min.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body >
+        <div data-role="page" id="loginPage">
+			<div role="main" class="ui-content"> 
+    		<div class="logo-center"><img title="Transparent Hands" src="img/logo_reg.png"></div>
+			<form id="adminLogin" name="adminLogin" class="login-form">
+            <label class="errormsg" style="display:none!important;" id="errormsg"></label>       
+        	<div class="ui-input-text ui-body-a ui-corner-all ">
+        	<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+   
+			<input type="text" id="username" name="username" class="required" placeholder="Username" />
+
+        	</div>
+            <div class="ui-input-text ui-body-a ui-corner-all ">
+        	<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        	  <input type="password" id="pass" name="pass" class="required" placeholder="Password"/>
+
+        	</div>
+            <div class="input-group" style="width:100%; padding-top:20px;">                      
+            	
+            	 <a id="btn_login" href="" name="btn_login" class="btn-login">Submit</a>
+            </div>
+           
+        	</form>
+	</div><!-- /content -->
+			
+		</div>
+		  <div data-role="page"  id="registerEvent">
+			<div data-role="header" class="ui-header">
+				<div class="logo"><img src="img/Logo-TH.png" width="261" height="61" alt="Transparent Hands"></div>
+				<div class="user">
+					<div class="text">
+						<a href="#" class="logout-icon logout"></a>
+						<span>
+							<h6>Welcome</h6>
+							
+							<h4 class="login-user"></h4>
+						</span>
+						
+					</div>
+					 
+				</div>
+			</div><!-- /header -->
+			<div data-role="navbar" class="ui-navbar">
+				<ul>
+					<li><span class="ui-btn-active">Create New Event</span></li>
+					<li>Settings</li>
+				</ul>
+			</div><!-- /navbar -->
+			<div role="main" class="ui-content"> 
+			<form id="registerInfo" class="login-form">      
+        		<input type="text" placeholder="Event Title" name="eventTitle" id="eventTitle" value="" class="required">
+        		<textarea placeholder="Event Description" style="margin-bottom:2px;" name="desc" id="desc"></textarea>           
+            	<input type="date" name="startDate" id="startDate" class="required" placeholder="Start Date" value="">
+            	<input type="date" name="endDate" id="endDate" class="required" placeholder="End Date" value="">
+                <input type="text" placeholder="Place/Venue" style="margin-top:1px;" value="" name="place" id="place"  class="required">
+                 <input type="text" placeholder="Organizer" style="margin-top:3px;" name="organizer" id="organizer" value="" class="required">
+				 <select name="country" id="country" value="" class="required">
+                        <option value="" selected="selected">Select Country</option> 
+						<option value="Afghanistan">Afghanistan</option> 
+						<option value="Albania">Albania</option> 
+						<option value="Algeria">Algeria</option> 
+						<option value="American Samoa">American Samoa</option> 
+						<option value="Andorra">Andorra</option> 
+						<option value="Angola">Angola</option> 
+						<option value="Anguilla">Anguilla</option> 
+						<option value="Antarctica">Antarctica</option> 
+						<option value="Antigua and Barbuda">Antigua and Barbuda</option> 
+						<option value="Argentina">Argentina</option> 
+						<option value="Armenia">Armenia</option> 
+						<option value="Aruba">Aruba</option> 
+						<option value="Australia">Australia</option> 
+						<option value="Austria">Austria</option> 
+						<option value="Azerbaijan">Azerbaijan</option> 
+						<option value="Bahamas">Bahamas</option> 
+						<option value="Bahrain">Bahrain</option> 
+						<option value="Bangladesh">Bangladesh</option> 
+						<option value="Barbados">Barbados</option> 
+						<option value="Belarus">Belarus</option> 
+						<option value="Belgium">Belgium</option> 
+						<option value="Belize">Belize</option> 
+						<option value="Benin">Benin</option> 
+						<option value="Bermuda">Bermuda</option> 
+						<option value="Bhutan">Bhutan</option> 
+						<option value="Bolivia">Bolivia</option> 
+						<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> 
+						<option value="Botswana">Botswana</option> 
+						<option value="Bouvet Island">Bouvet Island</option> 
+						<option value="Brazil">Brazil</option> 
+						<option value="British Indian Ocean Territory">British Indian Ocean Territory</option> 
+						<option value="Brunei Darussalam">Brunei Darussalam</option> 
+						<option value="Bulgaria">Bulgaria</option> 
+						<option value="Burkina Faso">Burkina Faso</option> 
+						<option value="Burundi">Burundi</option> 
+						<option value="Cambodia">Cambodia</option> 
+						<option value="Cameroon">Cameroon</option> 
+						<option value="Canada">Canada</option> 
+						<option value="Cape Verde">Cape Verde</option> 
+						<option value="Cayman Islands">Cayman Islands</option> 
+						<option value="Central African Republic">Central African Republic</option> 
+						<option value="Chad">Chad</option> 
+						<option value="Chile">Chile</option> 
+						<option value="China">China</option> 
+						<option value="Christmas Island">Christmas Island</option> 
+						<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option> 
+						<option value="Colombia">Colombia</option> 
+						<option value="Comoros">Comoros</option> 
+						<option value="Congo">Congo</option> 
+						<option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option> 
+						<option value="Cook Islands">Cook Islands</option> 
+						<option value="Costa Rica">Costa Rica</option> 
+						<option value="Cote D'ivoire">Cote D'ivoire</option> 
+						<option value="Croatia">Croatia</option> 
+						<option value="Cuba">Cuba</option> 
+						<option value="Cyprus">Cyprus</option> 
+						<option value="Czech Republic">Czech Republic</option> 
+						<option value="Denmark">Denmark</option> 
+						<option value="Djibouti">Djibouti</option> 
+						<option value="Dominica">Dominica</option> 
+						<option value="Dominican Republic">Dominican Republic</option> 
+						<option value="Ecuador">Ecuador</option> 
+						<option value="Egypt">Egypt</option> 
+						<option value="El Salvador">El Salvador</option> 
+						<option value="Equatorial Guinea">Equatorial Guinea</option> 
+						<option value="Eritrea">Eritrea</option> 
+						<option value="Estonia">Estonia</option> 
+						<option value="Ethiopia">Ethiopia</option> 
+						<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option> 
+						<option value="Faroe Islands">Faroe Islands</option> 
+						<option value="Fiji">Fiji</option> 
+						<option value="Finland">Finland</option> 
+						<option value="France">France</option> 
+						<option value="French Guiana">French Guiana</option> 
+						<option value="French Polynesia">French Polynesia</option> 
+						<option value="French Southern Territories">French Southern Territories</option> 
+						<option value="Gabon">Gabon</option> 
+						<option value="Gambia">Gambia</option> 
+						<option value="Georgia">Georgia</option> 
+						<option value="Germany">Germany</option> 
+						<option value="Ghana">Ghana</option> 
+						<option value="Gibraltar">Gibraltar</option> 
+						<option value="Greece">Greece</option> 
+						<option value="Greenland">Greenland</option> 
+						<option value="Grenada">Grenada</option> 
+						<option value="Guadeloupe">Guadeloupe</option> 
+						<option value="Guam">Guam</option> 
+						<option value="Guatemala">Guatemala</option> 
+						<option value="Guinea">Guinea</option> 
+						<option value="Guinea-bissau">Guinea-bissau</option> 
+						<option value="Guyana">Guyana</option> 
+						<option value="Haiti">Haiti</option> 
+						<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option> 
+						<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option> 
+						<option value="Honduras">Honduras</option> 
+						<option value="Hong Kong">Hong Kong</option> 
+						<option value="Hungary">Hungary</option> 
+						<option value="Iceland">Iceland</option> 
+						<option value="India">India</option> 
+						<option value="Indonesia">Indonesia</option> 
+						<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option> 
+						<option value="Iraq">Iraq</option> 
+						<option value="Ireland">Ireland</option> 
+						<option value="Israel">Israel</option> 
+						<option value="Italy">Italy</option> 
+						<option value="Jamaica">Jamaica</option> 
+						<option value="Japan">Japan</option> 
+						<option value="Jordan">Jordan</option> 
+						<option value="Kazakhstan">Kazakhstan</option> 
+						<option value="Kenya">Kenya</option> 
+						<option value="Kiribati">Kiribati</option> 
+						<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option> 
+						<option value="Korea, Republic of">Korea, Republic of</option> 
+						<option value="Kuwait">Kuwait</option> 
+						<option value="Kyrgyzstan">Kyrgyzstan</option> 
+						<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option> 
+						<option value="Latvia">Latvia</option> 
+						<option value="Lebanon">Lebanon</option> 
+						<option value="Lesotho">Lesotho</option> 
+						<option value="Liberia">Liberia</option> 
+						<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option> 
+						<option value="Liechtenstein">Liechtenstein</option> 
+						<option value="Lithuania">Lithuania</option> 
+						<option value="Luxembourg">Luxembourg</option> 
+						<option value="Macao">Macao</option> 
+						<option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option> 
+						<option value="Madagascar">Madagascar</option> 
+						<option value="Malawi">Malawi</option> 
+						<option value="Malaysia">Malaysia</option> 
+						<option value="Maldives">Maldives</option> 
+						<option value="Mali">Mali</option> 
+						<option value="Malta">Malta</option> 
+						<option value="Marshall Islands">Marshall Islands</option> 
+						<option value="Martinique">Martinique</option> 
+						<option value="Mauritania">Mauritania</option> 
+						<option value="Mauritius">Mauritius</option> 
+						<option value="Mayotte">Mayotte</option> 
+						<option value="Mexico">Mexico</option> 
+						<option value="Micronesia, Federated States of">Micronesia, Federated States of</option> 
+						<option value="Moldova, Republic of">Moldova, Republic of</option> 
+						<option value="Monaco">Monaco</option> 
+						<option value="Mongolia">Mongolia</option> 
+						<option value="Montserrat">Montserrat</option> 
+						<option value="Morocco">Morocco</option> 
+						<option value="Mozambique">Mozambique</option> 
+						<option value="Myanmar">Myanmar</option> 
+						<option value="Namibia">Namibia</option> 
+						<option value="Nauru">Nauru</option> 
+						<option value="Nepal">Nepal</option> 
+						<option value="Netherlands">Netherlands</option> 
+						<option value="Netherlands Antilles">Netherlands Antilles</option> 
+						<option value="New Caledonia">New Caledonia</option> 
+						<option value="New Zealand">New Zealand</option> 
+						<option value="Nicaragua">Nicaragua</option> 
+						<option value="Niger">Niger</option> 
+						<option value="Nigeria">Nigeria</option> 
+						<option value="Niue">Niue</option> 
+						<option value="Norfolk Island">Norfolk Island</option> 
+						<option value="Northern Mariana Islands">Northern Mariana Islands</option> 
+						<option value="Norway">Norway</option> 
+						<option value="Oman">Oman</option> 
+						<option value="Pakistan">Pakistan</option> 
+						<option value="Palau">Palau</option> 
+						<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option> 
+						<option value="Panama">Panama</option> 
+						<option value="Papua New Guinea">Papua New Guinea</option> 
+						<option value="Paraguay">Paraguay</option> 
+						<option value="Peru">Peru</option> 
+						<option value="Philippines">Philippines</option> 
+						<option value="Pitcairn">Pitcairn</option> 
+						<option value="Poland">Poland</option> 
+						<option value="Portugal">Portugal</option> 
+						<option value="Puerto Rico">Puerto Rico</option> 
+						<option value="Qatar">Qatar</option> 
+						<option value="Reunion">Reunion</option> 
+						<option value="Romania">Romania</option> 
+						<option value="Russian Federation">Russian Federation</option> 
+						<option value="Rwanda">Rwanda</option> 
+						<option value="Saint Helena">Saint Helena</option> 
+						<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+						<option value="Saint Lucia">Saint Lucia</option> 
+						<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option> 
+						<option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option> 
+						<option value="Samoa">Samoa</option> 
+						<option value="San Marino">San Marino</option> 
+						<option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+						<option value="Saudi Arabia">Saudi Arabia</option> 
+						<option value="Senegal">Senegal</option> 
+						<option value="Serbia and Montenegro">Serbia and Montenegro</option> 
+						<option value="Seychelles">Seychelles</option> 
+						<option value="Sierra Leone">Sierra Leone</option> 
+						<option value="Singapore">Singapore</option> 
+						<option value="Slovakia">Slovakia</option> 
+						<option value="Slovenia">Slovenia</option> 
+						<option value="Solomon Islands">Solomon Islands</option> 
+						<option value="Somalia">Somalia</option> 
+						<option value="South Africa">South Africa</option> 
+						<option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option> 
+						<option value="Spain">Spain</option> 
+						<option value="Sri Lanka">Sri Lanka</option> 
+						<option value="Sudan">Sudan</option> 
+						<option value="Suriname">Suriname</option> 
+						<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option> 
+						<option value="Swaziland">Swaziland</option> 
+						<option value="Sweden">Sweden</option> 
+						<option value="Switzerland">Switzerland</option> 
+						<option value="Syrian Arab Republic">Syrian Arab Republic</option> 
+						<option value="Taiwan, Province of China">Taiwan, Province of China</option> 
+						<option value="Tajikistan">Tajikistan</option> 
+						<option value="Tanzania, United Republic of">Tanzania, United Republic of</option> 
+						<option value="Thailand">Thailand</option> 
+						<option value="Timor-leste">Timor-leste</option> 
+						<option value="Togo">Togo</option> 
+						<option value="Tokelau">Tokelau</option> 
+						<option value="Tonga">Tonga</option> 
+						<option value="Trinidad and Tobago">Trinidad and Tobago</option> 
+						<option value="Tunisia">Tunisia</option> 
+						<option value="Turkey">Turkey</option> 
+						<option value="Turkmenistan">Turkmenistan</option> 
+						<option value="Turks and Caicos Islands">Turks and Caicos Islands</option> 
+						<option value="Tuvalu">Tuvalu</option> 
+						<option value="Uganda">Uganda</option> 
+						<option value="Ukraine">Ukraine</option> 
+						<option value="United Arab Emirates">United Arab Emirates</option> 
+						<option value="United Kingdom">United Kingdom</option> 
+						<option value="United States">United States</option> 
+						<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option> 
+						<option value="Uruguay">Uruguay</option> 
+						<option value="Uzbekistan">Uzbekistan</option> 
+						<option value="Vanuatu">Vanuatu</option> 
+						<option value="Venezuela">Venezuela</option> 
+						<option value="Viet Nam">Viet Nam</option> 
+						<option value="Virgin Islands, British">Virgin Islands, British</option> 
+						<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option> 
+						<option value="Wallis and Futuna">Wallis and Futuna</option> 
+						<option value="Western Sahara">Western Sahara</option> 
+						<option value="Yemen">Yemen</option> 
+						<option value="Zambia">Zambia</option> 
+						<option value="Zimbabwe">Zimbabwe</option>
+					 </select>
+        	</form>
+            <div class="btn-login-form" style="padding-top:20px; margin:0px auto;">                      
+				<a href="" id="createEvent_btn">Create Event</a>	
+            </div>
+	</div><!-- /content -->
+			
+		  </div>
+		  <div data-role="page" id="invitePeople">
+			<div data-role="header" class="ui-header">
+				<div class="logo"><img src="img/Logo-TH.png" width="261" height="61" alt="Transparent Hands"></div>
+				<div class="user">
+					<div class="text">
+					<a href="#" class="logout-icon logout"></a>
+					<span>
+						<h6>Welcome</h6>
+						<h4 class="login-user"></h4>
+					</span>
+					</div>
+					
+				</div>
+				 
+			</div><!-- /header -->
+				<div role="main" class="ui-content">
+				<div class="bar-two">
+<div class="left-box">
+<a href="#" class="ui-btn ui-btn-inline" data-role="button" data-mini="true" id="settings_btn">Back</a>
+<p>Registered <br>Contributors</p>
+</div>
+<div class="right-box">
+	        <ul id="menu-right" data-role="menu">
+            <li>	
+			
+                <span data-role="button" data-icon="arrow-d" data-iconpos="right" id="volunteer_count">
+				
+				</span>
+				<img class="list-view-icon" src="img/list-view-icon.png"/>
+                
+            </li>
+        </ul>    
+</div>
+</div>
+<div class="bar-three">
+<h3>Contributor Registrations</h3>
+</div>
+
+					<form id="peopleInfo" class="login-form" style="margin: 20px 0px 0px 20px; width: 50%;float:left">
+				
+					  <input type="text" name="first_name" id="first_name" value="" class="required" placeholder="First Name">
+					 <input cols="40" rows="8" name="last_name" id="last_name" class="required" placeholder="Last Name"></input>
+					  <input type="email" name="emailAdd" id="emailAdd" value="" class="required" placeholder="Email Address"/>	
+					<input type="number" name="directNo" id="directNo" value="" class="required" placeholder="Contact #"/>
+					 
+					
+					 <!-- <select type="text" name="reference" id="reference" value="" class="required">
+						<option value="">Referred By</option>
+						<option value="Qasim Mueen">Qasim Mueen</option>
+						<option value="Matt pomrink">Matt pomrink</option>
+						<option value="APWA">APWA</option>
+						<option value="Other">Other</option>
+					  </select>-->
+					  <input type="text" name="campaign" id="campaign" style="display:none"/>
+					  <input type="number" name="donation" id="donation" value="" class="required" placeholder="Amount Donated"/>
+					<select type="text" name="donationType" id="donationType" value="" class="required">
+						<option value="">Select Payment Method</option>
+						<option>Cheque</option>
+						<option>Cash</option>
+						<option>Online Transfer</option>
+						
+					  </select>
+					<div style="padding-top:20px; margin:0px auto;" class="">                      
+					  <a id="invitePeople_btn" href="" class="ui-link">Register</a>	
+					  <a id="updatePeople_btn" href="" class="ui-link" style="display:none">Update</a>
+					  <a id="cancel_btn" href="" class="ui-link" style="display:none">Cancel</a>
+					</div>
+						
+					</form>
+				
+					<div class="list-contributors">
+						<h2>Registered Contributor</h2>
+						<ul data-role="listview" data-inset="true" id="volunteer_list">
+							<li>No Contributor Registered</li>
+						</ul>
+					</div>
+					
+					<div class="clear"></div>
+					<div class="login-form" style="width: 680px; overflow-x: scroll; overflow-y: hidden; display: block; height: 386px; position: relative; margin: 20px;" id="listed_people">
+					
+						
+					<div class="thumbnail">	
+							<div class="thumbnail-top">
+								<div class="patient-img">
+									<img src="http://www.transparenthands.com/Uploads/635471460585807236.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="caption">
+									<h3>Relieve Zeeshan from Tonsillitis</h3>
+								</div>
+								<div class="days_donate">
+									<span>11 Days Left</span>
+									<button id="btn-donate" style="text-align:center" >Donate</button>
+								</div>
+							
+							</div>
+							<div class="thumbnail-bottom">
+								
+								<ul>
+									<li class="raised"><h4>4,500 PKR</h4><p>Raised</p></li>
+									<li class="donors"><h4>0</h4><p>Donors</p></li>
+									<li class="goal"><h4>45,000 PKR</h4><p>Required</p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="thumbnail">	
+							<div class="thumbnail-top">
+								<div class="patient-img">
+									<img src="http://www.transparenthands.com/Uploads/635471460585807236.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="caption">
+									<h3>Relieve Zeeshan from Tonsillitis</h3>
+								</div>
+								<div class="days_donate">
+									<span>11 Days Left</span>
+									<button id="btn-donate" style="text-align:center" >Donate</button>
+								</div>
+							
+							</div>
+							<div class="thumbnail-bottom">
+								
+								<ul>
+									<li class="raised"><h4>4,500 PKR</h4><p>Raised</p></li>
+									<li class="donors"><h4>0</h4><p>Donors</p></li>
+									<li class="goal"><h4>45,000 PKR</h4><p>Required</p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="thumbnail">	
+							<div class="thumbnail-top">
+								<div class="patient-img">
+									<img src="http://www.transparenthands.com/Uploads/635471460585807236.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="caption">
+									<h3>Relieve Zeeshan from Tonsillitis</h3>
+								</div>
+								<div class="days_donate">
+									<span>11 Days Left</span>
+									<button id="btn-donate" style="text-align:center" >Donate</button>
+								</div>
+							
+							</div>
+							<div class="thumbnail-bottom">
+							
+								<ul>
+									<li class="raised"><h4>4,500 PKR</h4><p>Raised</p></li>
+									<li class="donors"><h4>0</h4><p>Donors</p></li>
+									<li class="goal"><h4>45,000 PKR</h4><p>Required</p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="thumbnail">	
+							<div class="thumbnail-top">
+								<div class="patient-img">
+									<img src="http://www.transparenthands.com/Uploads/635471460585807236.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="caption">
+									<h3>Relieve Zeeshan from Tonsillitis</h3>
+								</div>
+								<div class="days_donate">
+									<span>11 Days Left</span>
+									<button id="btn-donate" style="text-align:center" >Donate</button>
+								</div>
+							
+							</div>
+							<div class="thumbnail-bottom">
+							
+								<ul>
+									<li class="raised"><h4>4,500 PKR</h4><p>Raised</p></li>
+									<li class="donors"><h4>0</h4><p>Donors</p></li>
+									<li class="goal"><h4>45,000 PKR</h4><p>Required</p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="thumbnail">	
+							<div class="thumbnail-top">
+								<div class="patient-img">
+									<img src="http://www.transparenthands.com/Uploads/635471460585807236.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="caption">
+									<h3>Relieve Zeeshan from Tonsillitis</h3>
+								</div>
+								<div class="days_donate">
+									<span>11 Days Left</span>
+									<button id="btn-donate" style="text-align:center" >Donate</button>
+								</div>
+							
+							</div>
+							<div class="thumbnail-bottom">
+								<ul>
+									<li class="raised"><h4>4,500 PKR</h4><p>Raised</p></li>
+									<li class="donors"><h4>0</h4><p>Donors</p></li>
+									<li class="goal"><h4>45,000 PKR</h4><p>Required</p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="thumbnail">	
+							<div class="thumbnail-top">
+								<div class="patient-img">
+									<img src="http://www.transparenthands.com/Uploads/635471460585807236.jpg" class="img-responsive" alt="">
+								</div>
+								<div class="caption">
+									<h3>Relieve Zeeshan from Tonsillitis</h3>
+								</div>
+								<div class="days_donate">
+									<span>11 Days Left</span>
+									<button id="btn-donate" style="text-align:center" >Donate</button>
+								</div>
+							
+							</div>
+							<div class="thumbnail-bottom">
+								
+								<ul>
+									<li class="raised"><h4>4,500 PKR</h4><p>Raised</p></li>
+									<li class="donors"><h4>0</h4><p>Donors</p></li>
+									<li class="goal"><h4>45,000 PKR</h4><p>Required</p></li>
+								</ul>
+							</div>
+						</div>
+					
+					</div>
+				
+				</div>
+			
+		  </div>
+		   <div data-role="page" id="settingsPage">
+			<div data-role="header" class="ui-header">
+				<div class="logo"><img src="img/Logo-TH.png" width="261" height="61" alt="Transparent Hands"></div>
+				<div class="user">
+					<div class="text">
+					<a href="#" class="logout-icon logout" ></a>
+					<span>
+						<h6>Welcome</h6>
+						<h4 class="login-user"></h4>
+						</span>
+					</div>
+				</div>
+			</div><!-- /header -->
+			<div data-role="navbar" class="ui-navbar">
+				<ul>
+					<li>Create New Event</li>
+					<li><span class="ui-btn-active">Settings</span></li>
+				</ul>
+			</div>
+			<div role="main" class="ui-content">
+				<div class="bar-three">
+					<h3>Event Details</h3>
+				</div>
+				<div class="box_events">
+					<a href="#" id="close_btn" class="button_event">Close this <span>Event</span></a>
+					<h2>Global Donors Conference 2014</h2>
+				<div class="box_entity">
+					<span>Start Date</span>
+					<h3 id="start-date"></h3>
+				</div>
+				<div class="box_entity">
+					<span>End Date</span>
+					<h3 id="end-date"></h3>
+				</div>
+				<div class="clear"></div>
+				<div class="box_entity">
+					<span>Venue</span>
+					<h3 id="venue"></h3>
+				</div>
+			</div>
+<div class="bar-three" style="background:none;padding:20px 0">
+<h3>Manage Contributor's Information</h3>
+<div class="box_events">
+<ul>
+<li><a href="#" class="ui-link" style="width:100px; margin-right:20px;" id="sync_btn" data-role="button">Sync</a> <span>Sync contributors information to application database.</span></li>
+<li><a href="#" class="ui-link" style="width:100px; margin-right:20px;" id="email_btn" data-role="button">Email</a> <span>Email contributors information to admin database.</span></li>
+<li><a href="#" class="ui-link" style="width:100px; margin-right:20px;" id="download_btn" data-role="button">Download </a> <span>Downloads information for contributor registrations.</span></li>
+</ul>
+</div>
+</div>
+</div>
+	</div>
+        
+		<script type="text/javascript" src="phonegap.js"></script>
+        
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/additional-methods.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		 <script>
+	$( document ).ready(function() {
+	$("input[type='number']").each(function(i, el) {
+    el.type = "text";
+    el.onfocus = function(){this.type="number";};
+    el.onblur = function(){this.type="text";};
+});
+
+		$('body').bind('hideOpenMenus', function(){
+			$("ul:jqmData(role='menu')").find('li > ul').hide();
+		}); 
+		var menuHandler = function(e) {
+			$('body').trigger('hideOpenMenus');
+			$(this).find('li > ul').show();
+			e.stopPropagation();
+		};
+		$("ul:jqmData(role='menu') li > ul li").click(function(e) {
+		   $('body').trigger('hideOpenMenus');
+		e.stopPropagation();
+		});
+		$('body').delegate("ul:jqmData(role='menu')",'click',menuHandler);
+		$('body').click(function(e){
+		   $('body').trigger('hideOpenMenus');
+		});
+	});
+</script>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+			
+			$('#first_name').on('keydown', function(event) {
+				if (this.selectionStart == 0 && event.keyCode >= 65 && event.keyCode <= 90 && !(event.shiftKey) && !(event.ctrlKey) && !(event.metaKey) && !(event.altKey)) {
+				var $t = $(this);
+				event.preventDefault();
+				var char = String.fromCharCode(event.keyCode);
+				$t.val(char + $t.val().slice(this.selectionEnd));
+				this.setSelectionRange(1,1);
+				}
+			});
+			$('#eventTitle').on('keydown', function(event) {
+				if (this.selectionStart == 0 && event.keyCode >= 65 && event.keyCode <= 90 && !(event.shiftKey) && !(event.ctrlKey) && !(event.metaKey) && !(event.altKey)) {
+				var $t = $(this);
+				event.preventDefault();
+				var char = String.fromCharCode(event.keyCode);
+				$t.val(char + $t.val().slice(this.selectionEnd));
+				this.setSelectionRange(1,1);
+				}
+			});
+			$('#organizer').on('keydown', function(event) {
+				if (this.selectionStart == 0 && event.keyCode >= 65 && event.keyCode <= 90 && !(event.shiftKey) && !(event.ctrlKey) && !(event.metaKey) && !(event.altKey)) {
+				var $t = $(this);
+				event.preventDefault();
+				var char = String.fromCharCode(event.keyCode);
+				$t.val(char + $t.val().slice(this.selectionEnd));
+				this.setSelectionRange(1,1);
+				}
+			});
+			$('#last_name').on('keydown', function(event) {
+			if (this.selectionStart == 0 && event.keyCode >= 65 && event.keyCode <= 90 && !(event.shiftKey) && !(event.ctrlKey) && !(event.metaKey) && !(event.altKey)) {
+			   var $t = $(this);
+			   event.preventDefault();
+			   var char = String.fromCharCode(event.keyCode);
+			   $t.val(char + $t.val().slice(this.selectionEnd));
+			   this.setSelectionRange(1,1);
+			   }
+			});
+			var today = new Date().toISOString().split('T')[0];
+			document.getElementsByName("startDate")[0].setAttribute('min', today);
+			document.getElementsByName("endDate")[0].setAttribute('min', today);
+			
+			$("#sync_btn").addClass('ui-disabled');
+			$("#email_btn").addClass('ui-disabled');
+			$("#download_btn").addClass('ui-disabled');
+			$( document ).on( "mobileinit", function() {
+				$.mobile.loader.prototype.options.text = "loading";
+				$.mobile.loader.prototype.options.textVisible = false;
+				$.mobile.loader.prototype.options.theme = "a";
+				$.mobile.loader.prototype.options.html = "";
+			});
+			$(document).ajaxStart(function() {
+				$.mobile.loading('show');
+			});
+
+			$(document).ajaxStop(function() {
+				$.mobile.loading('hide');
+		});
+			var start="";
+			var end="";
+			var venue="";
+			var count=0;
+			var str="";
+			$('#peopleInfo').validate({
+			errorClass:"error",
+			validClass: "has-success",
+			highlight: function(element, errorClass, validClass) {
+				$(element).closest('#registerInfo').addClass(errorClass).removeClass(validClass);
+			},
+			unhighlight: function(element, errorClass, validClass) {
+				$(element).closest('#registerInfo').addClass(validClass).removeClass(errorClass);
+			},
+				rules: {
+				  first_name: {
+					minlength: 3,
+					required: true	,
+					checkspaceatstart: true,
+					alphabets:true
+				  },
+				  last_name: {
+					minlength: 3,
+					required: true,
+					checkspaceatstart: true,
+					alphabets:true,	
+				  },
+				  emailAdd: {
+					required: true,
+					checkspaceatstart: true,
+					emailDomain:true,
+					email: true
+					
+				  },
+				  directNo: {
+					required: true,
+					checkspaceatstart: true,
+					number: true	
+				  },
+				  donation: {
+					required: true,
+					checkspaceatstart: true,
+					number: true,
+					donation:true
+				  }
+				  
+
+			 },
+		});
+
+			$('#registerInfo').validate({
+			errorClass:"error",
+			validClass: "has-success",
+			highlight: function(element, errorClass, validClass) {
+				$(element).closest('#registerInfo').addClass(errorClass).removeClass(validClass);
+			},
+			unhighlight: function(element, errorClass, validClass) {
+				$(element).closest('#registerInfo').addClass(validClass).removeClass(errorClass);
+			},
+				rules: {
+				  eventTitle: {
+					minlength: 4,
+					required: true	,
+					checkspaceatstart: true,
+					alphabets:true
+				  },
+				  organizer: {
+					minlength: 4,
+					required: true	,
+					checkspaceatstart: true,
+					alphabets:true
+				  },
+				  startDate:{
+					required:true
+				  },
+				  endDate:{
+					required:true,
+					endDateCheck: true
+				  },
+				  desc: {
+					checkspaceatstart: true,
+				  },
+				  place: {
+					required: true,
+					checkspaceatstart: true,
+					homeaddressrule: true	
+				  }
+
+			 },
+		});		
+		function capitaliseFirstLetter(string)
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+			    var ajax = new XMLHttpRequest();
+				var username="admin";
+				var password="admin@110";
+				var id,edit_id;
+				$("#btn_login").click(function(e){
+				if($('#adminLogin').valid()){
+						var name=$("#username").val();
+						var pass=$("#pass").val();
+						if(name==jQuery.trim(name) && pass==jQuery.trim(password)){
+							//alert("correct");
+							$.mobile.navigate("#registerEvent");
+							$(".login-user").text(capitaliseFirstLetter(username));
+							}
+						else{
+							$("#errormsg").text("Incorrect username/password");
+							$("#errormsg").show();
+							
+							}
+						}
+						
+				});
+				$("#settings_btn").click(function(e){
+							
+								$.mobile.navigate("#settingsPage");
+								
+							var monthNames = [ "January", "Feburary", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+							var a = start.split("-");
+							var d =new Date(start);
+							var weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"];
+
+							var day=weekDays[d.getDay()];
+
+							//shift_name=day+" , " + a[2]+"-"+monthNames[d.getMonth()];
+							shift_name=a[2]+"-"+a[1]+"-"+a[0];
+							var c = end.split("-");
+							var b =new Date(end);
+							var day1=weekDays[b.getDay()];
+							//shift_name1=day+" , " + c[2]+"-"+monthNames[b.getMonth()];
+							shift_name1=c[2]+"-"+c[1]+"-"+c[0];
+								$("#start-date").html(shift_name);
+								$("#end-date").html(shift_name1);
+								$("#venue").html(venue);
+								
+								});
+				$("#createEvent_btn").click(function(e){
+				//alert("in the function ");
+				if($("#registerInfo").valid()){
+				$(this).addClass('ui-disabled');
+					start=$("#startDate").val();
+								end=$("#endDate").val();
+								venue=$("#place").val();
+								
+				var data2=$("#registerInfo").serialize();
+				
+				var params =data2;
+				
+				//console.log(data2);
+				var url = 'http://www.labhooo.com/th/registerEvent.php';
+				ajax.open("POST", url, true);
+				ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			//	ajax.setRequestHeader("Content-length", params.length);
+				//ajax.setRequestHeader("Connection", "close");
+				
+				ajax.onreadystatechange = function() {
+				
+							if (ajax.readyState == 4 && ajax.status == 200 || ajax.status == 0){
+							//alert(ajax.response);
+								id=ajax.response;
+								//alert(id);
+							 $('#createEvent_btn').removeClass('ui-disabled');
+							 setPeoplepage();
+								
+								
+							}
+						};
+				
+				ajax.send(params);
+				}				
+				});
+		function setPeoplepage(){
+			$.mobile.navigate("#invitePeople");
+			var url ='http://192.168.0.132/Home/GetHomePagePatientData_API';
+					var modurl = url;
+					ajax.open("GET", modurl, true);
+					ajax.onreadystatechange = function() {
+								if (ajax.readyState == 4) {
+									if(ajax.status == 200 || ajax.status == 0) {
+										me=JSON.parse(ajax.response);
+										alert(ajax.response);
+										$("#listed_people").empty();
+										 for (var i=1; i<me.length; i++) {
+											
+							var temp='<div class="thumbnail">'+	
+							'<div class="thumbnail-top">'+
+								'<div class="patient-img">'+
+									'<img src="http://192.168.0.132'+me[i].ImagePath+'" class="img-responsive" alt="">'+
+								'</div>'+
+								'<div class="caption">'+
+									'<h3>'+me[i].Title+'</h3>'+
+								'</div>'+
+								'<div class="days_donate">'+
+									'<span>'+me[i].DaysRemaining+' Days Left</span>'+
+									'<button id="btn-donate_'+me[i].CampaignID+'" class="donate_btn" style="text-align:center" >Donate</button>'+
+								'</div>'+
+							'</div>'+
+								'<div class="thumbnail-bottom">'+
+								'<ul>'+
+									'<li class="raised"><h4>'+me[i].FundsCollected+'</h4><p>Raised</p></li>'+
+									'<li class="donors"><h4>'+me[i].Donors+'</h4><p>Donors</p></li>'+
+									'<li class="goal"><h4>'+me[i].FundsRequired+'</h4><p>Required</p></li>'+
+								'</ul>'+
+							'</div>'+
+						'</div>';
+						$("#listed_people").append(temp);
+						
+												
+											}
+												$(".donate_btn").on('click',function(event){
+												alert("in");
+													if(count==0){
+														count++;
+														var value=this.id;
+														var temp = value.split("_");
+														str+=temp[1];
+													}
+													else{
+														var value=this.id;
+														var temp = value.split("_");
+														str+=","+temp[1];
+													}
+													alert(str);
+													$("#campaign").val(str);
+													alert("Donar Selected");
+													
+													
+												
+												});
+									}
+								}
+					}
+					ajax.send(null);
+		
+		}
+				$("#updatePeople_btn").click(function(e){
+					if($('#peopleInfo').valid()){
+					
+						var data2=$("#peopleInfo").serialize();
+						var params =data2+"&id="+edit_id;
+						$(this).addClass('ui-disabled');
+						//console.log(data2);
+						//alert(params);
+						var url = 'http://www.labhooo.com/th/updatePeople.php';
+						ajax.open("POST", url, true);
+						//alert(params);
+						ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+						//ajax.setRequestHeader("Content-length", params.length);
+						//ajax.setRequestHeader("Connection", "close");
+						
+						ajax.onreadystatechange = function() {
+									if (ajax.readyState == 4 && ajax.status == 200 || ajax.status == 0) {
+									$('#updatePeople_btn').removeClass('ui-disabled');
+										alert(ajax.response);
+										$("#updatePeople_btn").hide();
+										$("#cancel_btn").hide();
+										$("#invitePeople_btn").show();	
+										  $('#invitePeople input').val('');
+										   /*var myselect = $("#country");
+											myselect[0].selectedIndex = 0;
+											myselect.selectmenu("refresh");
+											/*  var myselect = $("#reference");
+											myselect[0].selectedIndex = 0;
+											myselect.selectmenu("refresh");*/
+											var myselect = $("#donationType");
+											myselect[0].selectedIndex = 0;
+											myselect.selectmenu("refresh");
+											populate();
+									}
+								}
+						ajax.send(params);
+					}
+					
+				});
+									
+				//----------------
+				
+				$("#invitePeople_btn").click(function(e){
+					if($('#peopleInfo').valid()){
+						var data2=$("#peopleInfo").serialize();
+						var params =data2+"&id="+id;
+						$(this).addClass('ui-disabled');
+						//console.log(data2);
+						//alert(params);
+						var url = 'http://www.labhooo.com/th/invitePeople.php';
+						ajax.open("POST", url, true);
+					//	alert(params);
+						ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+						//ajax.setRequestHeader("Content-length", params.length);
+						//ajax.setRequestHeader("Connection", "close");
+						
+						ajax.onreadystatechange = function() {
+									if (ajax.readyState == 4 && ajax.status == 200 || ajax.status == 0) {
+									$('#invitePeople_btn').removeClass('ui-disabled');
+										if(ajax.responseText==0){
+										alert("Volunteer with the provided id is already registered");
+										}
+										else{
+										 var me= JSON.parse(ajax.response);
+										 $("#volunteer_count").html(me.length);
+										  $('#volunteer_list').empty();
+										    for (var i=0; i<me.length; i++) {
+											
+												//var temp= $('<li/>', {html:me[i].imei}).appendTo('#devices_status');
+												//temp.value=me[i].imei;
+												$("#volunteer_list").append('<li id="'+me[i].volunteer_id+'" class="edit_volunteer">'+me[i].volunteer_first_name+" "+ me[i].volunteer_last_name+'</li>');
+												
+											}
+											}
+											$(".edit_volunteer").on('click',function(event){
+											str="";
+											//alert("in function");
+												$("#updatePeople_btn").show();
+												$("#cancel_btn").show();
+												$("#invitePeople_btn").hide();	
+												
+												edit_id=this.id;
+												var url = 'http://www.labhooo.com/th/populateData.php';
+												var modurl = url+ "?name="+this.id;
+												//alert(modurl);
+												ajax.open("GET", modurl, true);
+												ajax.onreadystatechange = function() {
+												if (ajax.readyState == 4) {
+													if(ajax.status == 200 || ajax.status == 0) {
+														var me= JSON.parse(ajax.response);
+														var json = JSON.stringify(ajax.response);
+														//alert(json);
+														//alert(me[0].volunteer_first_name);
+														//alert(me[0]['volunteer_first_name']);
+														
+														$("#first_name").val(me[0].volunteer_first_name);
+														$("#last_name").val(me[0].volunteer_last_name);
+														$("#emailAdd").val(me[0].volunteer_email);
+														$("#directNo").val(me[0].volunteer_number);
+														/*$("#country").val(me[0].volunteer_country).attr('selected', true);
+														$('#country').selectmenu('refresh');
+													//	$("#reference").val(me[0].volunteer_reference).attr('selected', true);
+														//$('#reference').selectmenu('refresh');*/
+														$("#donation").val(me[0].volunteer_donation);
+														$("#donationType").val(me[0].volunteer_donation_type).attr('selected', true);
+														$('#donationType').selectmenu('refresh');
+													}
+												}
+												}
+												ajax.send(null);
+											
+											});
+											
+											
+										   $('#invitePeople input').val('');
+										 /*  var myselect = $("#country");
+											myselect[0].selectedIndex = 0;
+											myselect.selectmenu("refresh");*/
+											//  var myselect = $("#reference");
+											//myselect[0].selectedIndex = 0;
+											//myselect.selectmenu("refresh");
+											var myselect = $("#donationType");
+											myselect[0].selectedIndex = 0;
+											myselect.selectmenu("refresh");
+									}
+								};
+						
+						ajax.send(params);
+					}
+				});
+				
+				function populate(){
+				
+						var url = 'http://www.labhooo.com/th/populate.php';
+					var modurl = url+ "?name="+id;
+			
+					ajax.open("GET", modurl, true);
+					
+					
+						ajax.onreadystatechange = function() {
+									if (ajax.readyState == 4 && ajax.status == 200 || ajax.status == 0) {
+										var me= JSON.parse(ajax.response);
+										 $("#volunteer_count").html(me.length);
+										  $('#volunteer_list').empty();
+										    for (var i=0; i<me.length; i++) {
+											
+												//var temp= $('<li/>', {html:me[i].imei}).appendTo('#devices_status');
+												//temp.value=me[i].imei;
+												$("#volunteer_list").append('<li id="'+me[i].volunteer_id+'" class="edit_volunteer">'+me[i].volunteer_first_name+" "+ me[i].volunteer_last_name+'</li>');
+												
+											}
+									}
+									$(".edit_volunteer").on('click',function(event){
+											//alert("in function");
+											$("#cancel_btn").show();
+												$("#updatePeople_btn").show();
+												
+												$("#invitePeople_btn").hide();				
+												edit_id=this.id;
+												var url = 'http://www.labhooo.com/th/populateData.php';
+												var modurl = url+ "?name="+this.id;
+												//alert(modurl);
+												ajax.open("GET", modurl, true);
+												ajax.onreadystatechange = function() {
+												if (ajax.readyState == 4) {
+													if(ajax.status == 200 || ajax.status == 0) {
+														var me= JSON.parse(ajax.response);
+														var json = JSON.stringify(ajax.response);
+														//alert(json);
+														//alert(me[0].volunteer_first_name);
+														//alert(me[0]['volunteer_first_name']);
+														
+														$("#first_name").val(me[0].volunteer_first_name);
+														$("#last_name").val(me[0].volunteer_last_name);
+														$("#emailAdd").val(me[0].volunteer_email);
+														$("#directNo").val(me[0].volunteer_number);
+													//	$("#country").val(me[0].volunteer_country).attr('selected', true);
+														//$('#country').selectmenu('refresh');
+														//$("#reference").val(me[0].volunteer_reference).attr('selected', true);
+														//$('#reference').selectmenu('refresh');
+														$("#donation").val(me[0].volunteer_donation);
+														$("#donationType").val(me[0].volunteer_donation_type).attr('selected', true);
+														$('#donationType').selectmenu('refresh');
+													}
+												}
+												}
+												ajax.send(null);
+											
+											});
+								}
+								ajax.send(null);
+				
+				}
+				
+				
+				$("#cancel_btn").click(function(e){
+					$("#updatePeople_btn").hide();
+					$("#cancel_btn").hide();
+					$("#invitePeople_btn").show();
+					$('#invitePeople input').val('');
+					//var myselect = $("#country");
+				//	myselect[0].selectedIndex = 0;
+					//myselect.selectmenu("refresh");
+					//var myselect = $("#reference");
+					//myselect[0].selectedIndex = 0;
+					//myselect.selectmenu("refresh");
+					var myselect = $("#donationType");
+					myselect[0].selectedIndex = 0;
+					myselect.selectmenu("refresh");
+				});
+				
+				$("#sync_btn").click(function(e){
+					var url = 'http://www.labhooo.com/th/syncData.php';
+					var modurl = url+ "?name="+id;
+			//alert(modurl);
+					ajax.open("GET", modurl, true);
+					ajax.onreadystatechange = function() {
+								if (ajax.readyState == 4) {
+									if(ajax.status == 200 || ajax.status == 0) {
+										alert(ajax.response);
+									}
+								}
+					}
+					ajax.send(null);
+				});
+				$("#download_btn").click(function(e){
+					var url = 'http://www.labhooo.com/th/export.php';
+					var modurl = url+ "?name="+id;
+			//alert(modurl);
+					$(this).addClass('ui-disabled');
+					ajax.open("GET", modurl, true);
+					ajax.onreadystatechange = function() {
+								if (ajax.readyState == 4) {
+									if(ajax.status == 200 || ajax.status == 0) {
+									$('#download_btn').removeClass('ui-disabled');
+										//alert(ajax.response);
+										var url = ajax.response;
+										window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+										  var x = Math.floor((Math.random() * 100000) + 1);
+										  var name=x+"_data.csv";
+											var filePath = fs.root.toURL()+"/download/"+name; // full file path
+											//alert(filePath);
+											var fileTransfer = new FileTransfer();
+											fileTransfer.download(url, filePath, function (entry) {
+											
+											alert("Download Complete");
+											console.log(entry.fullPath); // entry is fileEntry object
+											}, function (error) {
+											console.log("Some error");
+										});
+										});
+									}
+								}
+					}
+					ajax.send(null);
+				});
+				
+				$("#email_btn").click(function(e){
+					var url = 'http://www.labhooo.com/th/emailData.php';
+					var modurl = url+ "?name="+id;
+			//alert(modurl);
+					$(this).addClass('ui-disabled');
+					ajax.open("GET", modurl, true);
+					ajax.onreadystatechange = function() {
+								if (ajax.readyState == 4) {
+									if(ajax.status == 200 || ajax.status == 0) {
+									$('#email_btn').removeClass('ui-disabled');
+										alert(ajax.response);
+									}
+								}
+					}
+					ajax.send(null);
+				});
+				$("#close_btn").click(function(e){
+					var url = 'http://www.labhooo.com/th/closeEvent.php';
+					var modurl = url+ "?name="+id;
+			//alert(modurl);
+					ajax.open("GET", modurl, true);
+					ajax.onreadystatechange = function() {
+								if (ajax.readyState == 4) {
+									if(ajax.status == 200 || ajax.status == 0) {
+									$("#close_btn").addClass('ui-disabled');
+									$('#sync_btn').removeClass('ui-disabled');
+									$('#email_btn').removeClass('ui-disabled');
+									$('#download_btn').removeClass('ui-disabled');
+										alert(ajax.response);
+									}
+								}
+					}
+					ajax.send(null);
+					
+				});
+				
+			});
+			
+			$(".logout").click(function(e){
+				$.mobile.navigate("#loginPage");
+				$("#username").val("");
+				$("#pass").val("");
+				$("#errormsg").hide();
+				/*super.init();
+				super.clearCache(); // just add This Line
+				
+super.loadUrl("file:///android_asset/www/index.html");*/
+				 
+			});
+			
+        </script>
+    </body>
+</html>
